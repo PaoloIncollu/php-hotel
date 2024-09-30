@@ -80,7 +80,13 @@
                         </span>
 
                         <span>
-                            <?php echo "{$hotel['parking']}" ?>
+                            <?php
+                            if($hotel['parking'] == true){
+
+                                echo 'Si';
+                            } else{
+                                echo 'No';
+                            }?>
                         </span>
 
                             
@@ -133,7 +139,15 @@
                     
                         <td><?php echo "{$hotel['name']}" ?></td>
                         <td><?php echo "{$hotel['description']}" ?></td>
-                        <td><?php echo "{$hotel['parking']}" ?></td>
+                        <td>
+                            <?php
+                            if($hotel['parking'] == true){
+
+                                echo 'Si';
+                            } else{
+                                echo 'No';
+                            }?> 
+                            </td>
                         <td><?php echo "{$hotel['vote']}" ?></td>
                         <td><?php echo "{$hotel['distance_to_center']}" ?></td>
                     </tr>
